@@ -34,10 +34,6 @@ export default {
         }
     },
 
-    created() {
-        console.log(this.$route.params.user)
-    },
-
     mounted() {
        this.fetchContributers()
     },
@@ -63,8 +59,6 @@ export default {
                     this.$refs.bar.hideLoading()
                 })
                 .catch(error => {
-                    console.log('error', error)
-
                     this.requesting = false
                     this.$refs.bar.hideLoading()
                 })

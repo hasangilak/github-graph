@@ -18,23 +18,30 @@
       page not found
     </div>
 
+    <div v-if="requesting" class="loading">
+      <beat-loader :size="`10px`"/>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
 import _ from 'lodash'
+import BeatLoader from 'vue-spinner/src/BeatLoader'
 
 export default {
   name: 'TypeAhead',
 
   data: function () {
     return {
-      requestedAt: null,
       requesting: false,
       repos: null,
       error: false
     }
+  },
+
+  components: {
+    BeatLoader
   },
 
   methods: {
@@ -105,5 +112,11 @@ export default {
 
   a {
     text-decoration: none;
+  }
+
+  .loading {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
   }
 </style>

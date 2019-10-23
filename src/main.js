@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from './Router.vue'
-import Graph from './Graph.vue'
 import TypeAhead from './TypeAhead.vue'
+import Graph from './Graph.vue'
 import VueRouter from 'vue-router'
 import ECharts from 'vue-echarts' // refers to components/ECharts.vue in webpack
 import 'echarts/lib/chart/bar'
